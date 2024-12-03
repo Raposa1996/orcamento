@@ -1,0 +1,256 @@
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #333333;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Estilo do fundo do conteúdo geral da página */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://c0.wallpaperflare.com/preview/19/153/130/business-background-illustration-people.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+/* Estilo geral para os campos de formulário */
+label,
+input,
+select {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom:10px;
+    color: #000000;
+}
+
+/* Estilos do formulário */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinha todos os itens à esquerda */
+    gap: 20px; /* Espaçamento entre os itens do formulário */
+    margin-bottom: 3    0px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para cada par label + input/select */
+.form-item {
+    display: flex;
+    flex-direction: row; /* Alinha o label e input na horizontal */
+    align-items: center;
+    gap: 10px; /* Espaço entre o label e o input/select */
+}
+
+/* Estilo para os labels */
+.form-container label {
+    font-weight: bold;
+}
+
+/* Estilo para os inputs e selects */
+.form-container input,
+.form-container select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+}
+
+/* Estilo específico para o select */
+.form-container select {
+    width: 220px;
+}
+
+/* Estilo do botão */
+.form-container button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+/* Estilos para o botão "Adicionar" */
+.form-container button {
+    padding: 12px 20px;
+    background-color: #4CAF50;  /* Cor de fundo */
+    color: white;               /* Cor do texto */
+    font-size: 16px;            /* Tamanho da fonte */
+    font-weight: bold;          /* Deixar o texto mais forte */
+    border: none;               /* Remover borda padrão */
+    border-radius: 5px;         /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor de ponteiro ao passar por cima */
+    transition: background-color 0.3s, transform 0.2s ease; /* Efeitos de transição */
+    margin-top: 20px;           /* Espaço superior */
+    width: 200px;               /* Largura do botão */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.form-container button:hover {
+    background-color: #45a049;  /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);      /* Leve aumento no tamanho */
+}
+
+/* Efeito de focus (quando o botão é clicado) */
+.form-container button:focus {
+    outline: none;              /* Remove o contorno padrão */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.6); /* Contorno de foco */
+}
+
+
+/* Estilos da tabela de transações */
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-table th,
+.transactions-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.transactions-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.transactions-table td.receita {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.transactions-table td.despesa {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Estilos do botão de editar e excluir */
+.edit-button,
+.delete-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos da mensagem de "Nenhuma transação cadastrada" */
+.no-transactions-message {
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Estilos do resumo financeiro */
+.summary-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.summary-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilo do saldo */
+#saldo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Estilos responsivos para larguras de tela menores que 600px */
+@media screen and (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .form-item {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .form-container input,
+    .form-container select {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .form-container button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .transactions-table th,
+    .transactions-table td {
+        padding: 10px;
+    }
+}
+
+/* Estilos responsivos para larguras de tela menores que 400px */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .transactions-table th,
+    .transactions-table td {
+        font-size: 12px;
+    }
+
+    .summary-container p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Adicionar o CSS do AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Adicionar o script do AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+  </head>
+  <body>
+    <!-- Título com efeito AOS -->
+    <h1 data-aos="fade-down">Controle Financeiro</h1>
+
+    <!-- Formulário com animação de entrada -->
+    <div class="form-container" data-aos="fade-up" data-aos-delay="100">
+      <label>Data:</label>
+      <input type="date" id="data" />
+      
+      <label>Descrição:</label>
+      <input type="text" id="descricao" />
+      
+      <label>Valor:</label>
+      <input type="number" id="valor" step="0.01" />
+      
+      <label>Tipo:</label>
+      <select id="tipo">
+        <option value="receita">Receita</option>
+        <option value="despesa">Despesa</option>
+      </select>
+      
+      <button onclick="adicionarTransacao()">Adicionar</button>
+    </div>
+
+    <!-- Transações com animação de entrada -->
+    <div id="transactions" data-aos="fade-left" data-aos-delay="200">
+      <h2>Transações</h2>
+      <div id="table-container">
+        <table class="transactions-table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="no-transactions-message hidden"></p>
+    </div>
+
+    <!-- Resumo Financeiro com animação de entrada -->
+    <div class="summary-container" data-aos="fade-right" data-aos-delay="300">
+      <h2>Resumo Financeiro</h2>
+      <p>Saldo atual: R$ <span id="saldo">0.00</span></p>
+    </div>
+
+    <!-- Inicialização do AOS -->
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
